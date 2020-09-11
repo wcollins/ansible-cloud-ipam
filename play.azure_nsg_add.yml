@@ -1,0 +1,12 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: True
+  vars:
+    play_action: azure_nsg_add
+
+  roles:
+    - azure-cloud
+
+...
