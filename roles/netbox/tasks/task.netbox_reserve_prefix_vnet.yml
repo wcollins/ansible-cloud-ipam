@@ -15,7 +15,6 @@
       site: "{{ azure_location }}"
 
       # Metadata
-      prefix_role: "{{ prefix_role }}"
       description: "{{ prefix_desc }}"
 
       # Tags
