@@ -1,0 +1,43 @@
+# .gitignore
+
+# OS specific
+output/
+.DS_Store
+Thumbs.db
+.cache
+*.log
+*.swo
+*.swp
+*.cache
+*~
+*#
+._*
+tags
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ansible specific
+*.retry
+files/*
+archives/*
+
+# dotenv
+.env
+
+# virtualenv
+.venv*
+venv
+ENV/
+
+# VSCode specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
