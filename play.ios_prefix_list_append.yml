@@ -1,0 +1,10 @@
+---
+
+- hosts: ASR1002
+  vars:
+    play_action: ios_prefix_list_append
+
+  roles:
+    - cisco-ios
+
+...
