@@ -1,0 +1,15 @@
+---
+
+- include_tasks: task.azure_rg_add.yml
+  when: play_action == 'azure_rg_add'
+
+- include_tasks: task.azure_snet_add.yml
+  when: play_action == 'azure_snet_add'
+
+- include_tasks: task.azure_vnet_add.yml
+  when: play_action == 'azure_vnet_add'
+
+- include_tasks: task.azure_nsg_add.yml
+  when: play_action == 'azure_nsg_add'
+
+...
