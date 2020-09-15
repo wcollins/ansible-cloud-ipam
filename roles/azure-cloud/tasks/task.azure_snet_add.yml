@@ -1,0 +1,17 @@
+---
+
+- name: Create a new subnet in Azure
+  azure_rm_subnet:
+
+    # Subnet details
+    name: "{{ azure_snet_name }}"
+    resource_group: "{{ azure_rg_name }}"
+    virtual_network_name: "{{ azure_vnet_name }}"
+    address_prefix_cidr: "{{ net_prefix }}"
+
+    # NSG details
+    security_group:
+      name: "{{ azure_nsg_name }}"
+      resource_group: "{{ azure_rg_name }}"
+
+...

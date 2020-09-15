@@ -1,0 +1,13 @@
+---
+
+- name: Create a new resource group in Azure
+  azure_rm_resourcegroup:
+    name: "{{ azure_rg_name }}"
+    location: "{{ azure_location }}"
+    tags:
+      billing_id: "{{ billing_id }}"
+      business_unit: "{{ business_unit }}"
+      support_group: "{{ support_group }}"
+    state: present
+
+...

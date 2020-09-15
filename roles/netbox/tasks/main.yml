@@ -1,0 +1,9 @@
+---
+
+- include_tasks: task.netbox_reserve_prefix_vnet.yml
+  when: play_action == 'netbox_reserve_prefix_vnet'
+
+- include_tasks: task.netbox_reserve_prefix_snet.yml
+  when: play_action == 'netbox_reserve_prefix_snet'
+
+...

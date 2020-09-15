@@ -1,0 +1,13 @@
+---
+
+- name: Create a new security group in azure
+  azure_rm_securitygroup:
+    name: "{{ azure_nsg_name }}"
+    resource_group: "{{ azure_rg_name }}"
+    tags:
+      billing_id: "{{ billing_id }}"
+      business_unit: "{{ business_unit }}"
+      support_group: "{{ support_group }}"
+    purge_rules: yes
+
+...

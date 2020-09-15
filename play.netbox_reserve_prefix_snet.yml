@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  connection: local
+  hosts: localhost
+  gather_facts: False
+  vars:
+    play_action: netbox_reserve_prefix_snet
+
+  roles:
+    - netbox
+
+...

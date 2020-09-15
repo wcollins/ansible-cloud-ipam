@@ -1,0 +1,31 @@
+---
+
+# Block - Append prefix-list on IOS
+- name: Append prefix-list on IOS
+  block:
+
+  # Create temp staging directory
+  - name: Stage config directory
+    file:
+      path: "staging/{{ inventory_hostname }}"
+      state: directory
+      mode: '0777'
+
+   # Stage configuration for IOS prefix-list
+  - name: Stage configuration for IOS prefix-list
+    template:
+      src: prefix_list_append.j2
+      dest: "staging/{{ inventory_hostname }}/prefix_list_append.cfg"
+
+    # Push configuration to IOS
+  - name: Push configuration to IOS
+    ios_config:
+      src: "staging/{{ inventory_hostname }}/prefix_list_append.cfg"
+
+   # Clean up temp staging directory
+  - name: Clean staging directory
+    file:
+      path: "staging/{{ inventory_hostname }}"
+      state: absent
+
+...

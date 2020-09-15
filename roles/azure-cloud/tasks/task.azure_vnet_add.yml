@@ -1,0 +1,13 @@
+---
+
+- name: Create a new virtual network in Azure
+  azure_rm_virtualnetwork:
+    name: "{{ azure_vnet_name }}"
+    resource_group: "{{ azure_rg_name }}"
+    address_prefixes: "{{ net_prefix }}"
+    tags:
+      billing_id: "{{ billing_id }}"
+      business_unit: "{{ business_unit }}"
+      support_group: "{{ support_group }}"
+
+...
