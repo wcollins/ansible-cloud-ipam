@@ -12,3 +12,5 @@ If you are hybrid multi-cloud, it probably means you are sharing the same RFC191
 * Audience - Design application/system architectures; Manage infrastructure
 * Technical Difficulty - Very advanced
 * Industry - Healthcare & life sciences
+
+It can be challenging to fit all of your thoughts in a 30-minute session. For a more _in-depth_ look at tackling this problem, visit [wcollins.github.io](https://wcollins.github.io/post/2020/01-automating-cloud-ipam/) where I un-pack more details and broaden the context.
